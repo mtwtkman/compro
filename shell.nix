@@ -18,6 +18,10 @@ mkShell {
       popd
     }
 
+    solve:hs:yuki() {
+      solve:hs "Yukicoder/$1"
+    }
+
     alias solve:rs="pushd rust;cargo run;popd"
 
   '';
