@@ -12,6 +12,10 @@ mkShell {
       cp haskell/Template haskell/$1.hs
     }
 
+    hs:yuki() {
+      hs "Yukicoder/$1"
+    }
+
     solve:hs() {
       pushd haskell
       runghc $1.hs
