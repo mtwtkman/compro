@@ -13,7 +13,7 @@ mkShell {
     }
 
     hs:yuki() {
-      hs "Yukicoder/$1"
+      hs "Yukicoder/No$1"
     }
 
     solve:hs() {
