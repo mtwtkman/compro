@@ -23,7 +23,7 @@ mkShell {
     }
 
     solve:hs:yuki() {
-      solve:hs "Yukicoder/$1"
+      solve:hs "Yukicoder/No$1"
     }
 
     alias solve:rs="pushd rust;cargo run;popd"
