@@ -16,6 +16,14 @@ mkShell {
       hs "Yukicoder/No$1"
     }
 
+    answer:hs:yuki() {
+      vim "haskell/Yukicoder/No$1.hs"
+    }
+
+    repl:hs:yuki() {
+      ghci "haskell/Yukicoder/No$1.hs"
+    }
+
     solve:hs() {
       pushd haskell
       runghc $1.hs

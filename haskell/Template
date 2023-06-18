@@ -11,5 +11,14 @@ split = go ("", [])
 prompt :: IO [String]
 prompt = do split <$> getLine
 
+promptN :: Int -> IO [[String]]
+promptN n = go n []
+  where
+    go :: Int -> [[String]] -> IO [[String]]
+    go 0 acc = return acc
+    go n acc = do
+      vs <- prompt
+      go (n - 1) (acc <> [vs])
+
 main :: IO ()
 main = return ()
